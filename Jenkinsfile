@@ -49,7 +49,7 @@ pipeline {
         // on local Jenkins machine (assuming port 8080) see
         // http://localhost:8080/pipeline-syntax/globals#env
         echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
-        sh 'npx cypress run -b chrome --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007 --spec "C:\Users\gil\Cypress_scripts\cypress\tests\login.js"'
+        sh 'npx cypress run -b chrome --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007 --spec "C:/Users/gil/Cypress_scripts/cypress/tests/login.js"'
       }
     }
   }
