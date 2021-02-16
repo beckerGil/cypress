@@ -12,7 +12,7 @@ pipeline {
                 echo "get Electron appData path"
                 sh 'rm -f /e2e/cypress-cache/3.6.0/Cypress/resources/electron.asar'
                 sh 'custom-electron-version/electron.asar /e2e/cypress-cache/3.6.0/Cypress/resources/'
-                // sh 'cypress run --browser chrome'
+                sh 'cypress run --browser chrome'
             }
         }
     }
