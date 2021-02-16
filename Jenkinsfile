@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'node:14-alpine' }
+        docker { image 'cypress/included:6.3.0' }
     }
     stages {
         stage('Test') {
