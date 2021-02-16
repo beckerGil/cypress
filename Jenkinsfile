@@ -9,7 +9,9 @@ pipeline {
                 sh 'node --version'
                 echo "sh 'cypress run -h'"
                 sh 'cypress run -h'
-                sh 'cypress run --browser chrome'
+                echo "get Electron appData path"
+                sh 'rm -f /e2e/cypress-cache/3.6.0/Cypress/resources/electron.asar'
+                // sh 'cypress run --browser chrome'
             }
         }
     }
