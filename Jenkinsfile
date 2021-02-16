@@ -9,6 +9,7 @@ pipeline {
                 sh 'node --version'
                 echo "sh 'cypress run -h'"
                 sh 'cypress run -h'
+                sh 'cypress run'
             }
         }
     }
