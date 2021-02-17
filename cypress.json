@@ -8,5 +8,9 @@
         "user_password": 123456
     },
     "integrationFolder" : "cypress/tests",
-    "CYPRESS_RECORD_KEY": "03b6e3df-6cb4-4c90-8c7a-f882fe169007"
+    "CYPRESS_RECORD_KEY": "03b6e3df-6cb4-4c90-8c7a-f882fe169007",
+    "cy:run": "cypress run",
+    "cy:verify": "cypress verify",
+    "ci:start-ng": "angular-http-server --path ./dist/YOUR_APP_NAME -p 4200",
+    "ci:cy-run": "start-server-and-test ci:start-ng http://localhost:4200 cy:run"
 }
