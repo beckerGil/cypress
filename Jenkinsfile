@@ -3,7 +3,7 @@ pipeline {
         docker { image 'cypress/included:6.3.0' }
     }
 
-    enviroment {
+    environment  {
         HOME = '.'
     }
 
