@@ -2,6 +2,11 @@ pipeline {
     agent {
         docker { image 'cypress/included:6.3.0' }
     }
+
+    enviroment {
+        HOME = '.'
+    }
+
     stages {
         stage('Test') {
             steps {
