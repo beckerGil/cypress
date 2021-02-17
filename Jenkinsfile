@@ -18,12 +18,13 @@ pipeline {
                 // sh 'rm -f /e2e/cypress-cache/6.3.0/Cypress/resources/electron.asar'
                 // sh 'custom-electron-version/electron.asar /e2e/cypress-cache/6.3.0/Cypress/resources/'
                 sh 'npm ci'
+                sh 'npm run cy:verify'
             }
         }
 
         stage('Test'){
             steps{
-                sh 'cypress run'
+                sh 'npm run ci:cy-run'
             }
         }
     }
