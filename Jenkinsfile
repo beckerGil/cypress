@@ -21,7 +21,7 @@ pipeline {
 
         stage('Test'){
             steps{
-                sh 'npm run runcy'
+                sh 'npm run cy:run'
             }
         }
     }
