@@ -14,7 +14,7 @@ pipeline {
                 sh 'node --version'
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
-                echo 'CYPRESS_CACHE_FOLDER'
+                echo CYPRESS_CACHE_FOLDER
                 sh 'npm ci'
                 // sh 'npm run node_module\\.bin\\cypress verify'
             }
