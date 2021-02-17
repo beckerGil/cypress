@@ -12,8 +12,8 @@ pipeline {
             steps {
                 echo "'node --version'"
                 sh 'node --version'
-                echo "sh 'cypress run -h'"
-                sh 'cypress run -h'
+                // echo "sh 'cypress run -h'"
+                // sh 'cypress run -h'
                 sh 'npm ci'
                 // sh 'npm run node_module\\.bin\\cypress verify'
             }
