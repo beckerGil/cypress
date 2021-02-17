@@ -21,7 +21,7 @@ pipeline {
 
         stage('Test'){
             steps{
-                sh 'npm run cy:run'
+                sh 'npm run cypress run'
             }
         }
     }
