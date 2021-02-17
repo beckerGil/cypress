@@ -17,7 +17,8 @@ pipeline {
                 // echo "get Electron appData path"
                 // sh 'rm -f /e2e/cypress-cache/6.3.0/Cypress/resources/electron.asar'
                 // sh 'custom-electron-version/electron.asar /e2e/cypress-cache/6.3.0/Cypress/resources/'
-                sh 'cypress run'
+                sh 'npm ci'
+                sh 'npm run cy:verify'
             }
         }
     }
