@@ -5,6 +5,7 @@ pipeline {
 
     environment  {
         HOME = '.'
+        CYPRESS_RUN_BINARY = '.'
     }
 
     stages {
