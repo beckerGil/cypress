@@ -5,7 +5,7 @@ pipeline {
 
     environment  {
         HOME = '.'
-        CYPRESS_RUN_BINARY = '.'
+        CYPRESS_RUN_BINARY = '/var/lib/jenkins/workspace/cypress_master/node_modules/cypress'
     }
 
     stages {
