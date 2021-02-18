@@ -16,6 +16,7 @@ pipeline {
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
                 sh 'npm ci'
+                sh 'unset NODE_OPTIONS'
                 // sh 'npm run node_module\\.bin\\cypress verify'
             }
         }
