@@ -11,13 +11,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'docker inspect'
                 echo "'node --version'"
                 sh 'node --version'
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
-                sh 'npm ci'
-                sh 'cypress cache clear'
-                sh 'cypress verify'
+                // sh 'npm ci'
                 // sh 'npm run node_module\\.bin\\cypress verify'
             }
         }
