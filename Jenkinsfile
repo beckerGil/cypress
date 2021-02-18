@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'cypress/base:12.16.1' }
+        docker { image 'cypress/base:10' }
     }
 
     environment  {
@@ -15,8 +15,9 @@ pipeline {
                 sh 'node --version'
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
-                sh 'npm install --save-dev cypress'
-                sh 'npm fund'
+                sh 'npm ci'
+                sh 'cypress cache clear'
+                sh 'cypress verify'
                 // sh 'npm run node_module\\.bin\\cypress verify'
             }
         }
