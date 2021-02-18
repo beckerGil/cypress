@@ -4,7 +4,7 @@ pipeline {
     }
 
     environment  {
-        HOME = '.'
+        CHROME_BIN = '/bin/google-chrome'
     }
 
     stages {
@@ -15,7 +15,7 @@ pipeline {
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
                 sh 'npm ci'
-                sh 'npm install cypress'
+                // sh 'npm install cypress'
                 sh 'npx cypress run'
                 // sh 'npm run node_module\\.bin\\cypress verify'
             }
