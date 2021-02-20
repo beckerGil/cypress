@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'Xvfb -screen 0 1024x768x24 :99 &'
+                sh 'Xvfb :99 &'
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
                 // sh 'npm install'
