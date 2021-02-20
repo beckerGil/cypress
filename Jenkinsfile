@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'Xvfb :99 &'
+                sh 'Xvfb -screen 0 1024x768x24 :99 &'
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
                 sh 'npm ci'
@@ -29,9 +29,9 @@ pipeline {
         stage('Test'){
             steps{
                 sh 'npm -v'
-                sh "npm run e2e:record:chrome"
-                sh 'npm run cy:run --headless -b chrome --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007 -s "cypress/test/login.js"'
-                // sh 'npx cypress run --headless -b chrome  --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007'
+                // sh "npm run e2e:record:chrome"
+                // sh 'npm run cy:run --headless -b chrome --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007 -s "cypress/test/login.js"'
+                sh 'npx cypress run --headless -b chrome  --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007'
             }
         }
 
