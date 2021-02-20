@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'node --version'
+                sh 'Xvfb :99 &'
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
                 // sh 'npm ci'
