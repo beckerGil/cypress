@@ -8,7 +8,8 @@
     "cy:run": "cypress run",
     "cy:verify": "cypress verify",
     "ci:start-ng": "angular-http-server --path ./dist/YOUR_APP_NAME -p 4200",
-    "ci:cy-run": "start-server-and-test ci:start-ng http://localhost:4200 cy:run"
+    "ci:cy-run": "start-server-and-test ci:start-ng http://localhost:4200 cy:run",
+    "e2e:record:chrome": "cypress run --record --browser chrome"
   },
   "author": "",
   "license": "ISC",
