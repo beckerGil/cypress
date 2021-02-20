@@ -16,8 +16,8 @@ pipeline {
                 sh 'Xvfb :99 &'
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
-                // sh 'npm install'
-                // sh 'npx cypress install'
+                sh 'npm install'
+                sh 'npx cypress install'
                 sh 'npm ci'
                 // sh 'npm run cy:verify'
             }
