@@ -1,11 +1,10 @@
 pipeline {
     agent {
-        docker { image 'cypress/included:6.2.1 --entrypoint=''' }
+        docker { image 'cypress/included:6.2.1' }
     }
 
     environment  {
         HOME = '.'
-        CYPRESS_RUN_BINARY = '/var/lib/jenkins/workspace/cypress_master/node_modules/cypress/'
     }
 
     stages {
