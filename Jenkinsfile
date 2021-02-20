@@ -27,7 +27,9 @@ pipeline {
         }
 
         stage('Post'){
-            sh 'pkill Xvfb'
+            steps{
+                sh 'pkill Xvfb'
+            }
         }
     }
 }
