@@ -1,6 +1,7 @@
 pipeline {
     agent {
-        docker { image 'cypress/included:6.3.0' }
+        docker { image 'cypress/base:14' }
+        // docker { image 'cypress/included:6.3.0' }
     }
 
     environment  {
@@ -17,7 +18,7 @@ pipeline {
                 // sh 'cypress run -h'
                 // sh 'npm install'
                 // sh 'npx cypress install'
-                // sh 'npm ci'
+                sh 'npm ci'
                 // sh 'npm run cy:verify'
             }
         }
