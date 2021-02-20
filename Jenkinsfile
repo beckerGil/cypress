@@ -22,8 +22,8 @@ pipeline {
         stage('Test'){
             steps{
                 sh 'npm -v'
-                // sh 'npx cypress run'
-                sh 'npx cypress run --headless -b chrome  --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007'
+                sh 'npm run cypress run'
+                // sh 'npx cypress run --headless -b chrome  --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007'
             }
         }
 
