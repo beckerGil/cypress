@@ -27,11 +27,12 @@ pipeline {
             }
         }
 
-        Post {
-            always {
-                sh 'pkill Xvfb'
-                sh 'pkill -f http-server'
-            }
+    }
+    
+    Post {
+        always {
+            sh 'pkill Xvfb'
+            sh 'pkill -f http-server'
         }
     }
 }
