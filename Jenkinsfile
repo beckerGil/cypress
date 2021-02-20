@@ -15,9 +15,9 @@ pipeline {
                 sh 'Xvfb -screen 0 1024x768x24 :99 &'
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
-                sh 'npm install'
-                sh 'npx cypress install'
-                sh 'npm ci'
+                // sh 'npm install'
+                // sh 'npx cypress install'
+                // sh 'npm ci'
                 // sh 'npm run cy:verify'
             }
         }
