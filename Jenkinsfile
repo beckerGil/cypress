@@ -22,7 +22,7 @@ pipeline {
         stage('Test'){
             steps{
                 sh 'npm -v'
-                sh 'npm run cypress run'
+                sh 'npm run cy:run --headless -b chrome --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007 -s "cypress/test/login.js"'
                 // sh 'npx cypress run --headless -b chrome  --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007'
             }
         }
