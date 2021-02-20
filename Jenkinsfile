@@ -6,6 +6,7 @@ pipeline {
     environment  {
         HOME = '.'
         CYPRESS_CACHE_FOLDER = '/root/.cache/Cypress'
+        DISPLAY = ':99'
     }
 
     stages {
@@ -21,8 +22,12 @@ pipeline {
         stage('Test'){
             steps{
                 sh 'npm -v'
-                // sh 'npx cypress run'
+                sh 'npx cypress run'
             }
+        }
+
+        stage('Post'){
+            sd 'pkill Xvfb'
         }
     }
 }
