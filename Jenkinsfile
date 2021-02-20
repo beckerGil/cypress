@@ -27,9 +27,10 @@ pipeline {
             }
         }
 
-        stage('Post'){
-            steps{
+        Post {
+            always {
                 sh 'pkill Xvfb'
+                sh 'pkill -f http-server'
             }
         }
     }
