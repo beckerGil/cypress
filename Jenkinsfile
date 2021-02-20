@@ -15,7 +15,14 @@ pipeline {
                 sh 'Xvfb :99 &'
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
-                // sh 'npm ci'
+                sh 'npm ci'
+                sh 'npm run cy:verify'
+            }
+        }
+
+        stage('start local server'){
+            steps{
+                sh 'nohup npm run start:ci &'
             }
         }
 
