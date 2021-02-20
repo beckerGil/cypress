@@ -6,7 +6,7 @@ pipeline {
 
     environment  {
         HOME = '.'
-        // CYPRESS_CACHE_FOLDER = '/root/.cache/Cypress'
+        CYPRESS_CACHE_FOLDER = '/var/lib/jenkins/workspace/cypress_master/node_modules/cypress/.cache/Cypress'
         DISPLAY = ':99'
     }
 
@@ -16,8 +16,8 @@ pipeline {
                 sh 'Xvfb :99 &'
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
-                sh 'npm install'
-                sh 'npx cypress install'
+                // sh 'npm install'
+                // sh 'npx cypress install'
                 sh 'npm ci'
                 // sh 'npm run cy:verify'
             }
