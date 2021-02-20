@@ -29,6 +29,7 @@ pipeline {
         stage('Test'){
             steps{
                 sh 'npm -v'
+                sh 'npx cypress cache list'
                 // sh "npm run e2e:record:chrome"
                 // sh 'npm run cy:run --headless -b chrome --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007 -s "cypress/test/login.js"'
                 sh 'npx cypress run --headless -b chrome  --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007'
