@@ -28,8 +28,10 @@ pipeline {
         }
 
         stage('Post'){
-            sh 'pkill Xvfb'
-            sh 'pkill -f http-server'
+            steps{
+                sh 'pkill Xvfb'
+                sh 'pkill -f http-server'
+            }
         }
     }
 }
