@@ -16,7 +16,7 @@ pipeline {
                 // echo "sh 'cypress run -h'"
                 // sh 'cypress run -h'
                 sh 'npm ci'
-                sh 'npm run cy:verify'
+                // sh 'npm run cy:verify'
             }
         }
 
