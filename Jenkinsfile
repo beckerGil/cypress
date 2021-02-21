@@ -18,7 +18,7 @@ pipeline {
                 // sh 'cypress run -h'
                 // sh 'npm install'
                 // sh 'npx cypress install'
-                // sh 'npm ci'
+                sh 'npm ci'
                 // sh 'npm run cy:verify'
             }
         }
