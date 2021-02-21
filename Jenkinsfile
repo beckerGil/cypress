@@ -5,8 +5,8 @@ pipeline {
     }
 
     environment  {
-        HOME = '.'
-        CYPRESS_CACHE_FOLDER = '/var/lib/jenkins/workspace/cypress_master/node_modules/cypress/.cache/Cypress'
+        HOME = '${pwd()}/cache'
+        CYPRESS_CACHE_FOLDER = '${pwd()}/cache'
         DISPLAY = ':99'
     }
 
