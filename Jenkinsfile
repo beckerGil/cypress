@@ -5,8 +5,8 @@ pipeline {
     }
 
     environment  {
-        HOME = '${pwd()}/cache'
-        CYPRESS_CACHE_FOLDER = '${pwd()}/cache'
+        HOME = 'pwd()}/cache'
+        CYPRESS_CACHE_FOLDER = 'pwd()}/cache'
         DISPLAY = ':99'
     }
 
