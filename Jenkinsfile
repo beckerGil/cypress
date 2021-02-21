@@ -15,6 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'Xvfb :99 &'
+                sh 'Xvfb -screen 0 1024x768x24 :99 &'
             }
         }
 
@@ -29,21 +30,14 @@ pipeline {
                 sh 'NO_COLOR=1 npx cypress run --headless -b chrome  --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007'
 
             }
-        }
-
-        // stage('Post'){
-        //     steps{
-        //         sh 'pkill Xvfb'
-        //         sh 'pkill -f http-server'
-        //     }
-        // }
-        
+        }        
     }
     
     post {
     // shutdown the server running in the background
     always {
       echo 'Stopping local server'
+      sh 'pkill Xvfb'
     }
   }
 }
