@@ -26,7 +26,7 @@ pipeline {
 
         stage('Test'){
             steps{
-                sh 'NO_COLOR=1 DEBUG = cypress:server:video npx cypress run --headless -b chrome  --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007'
+                sh 'NO_COLOR=1 DEBUG=cypress:* cypress run --headless -b chrome  --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007'
             }
         }        
     }
