@@ -27,7 +27,7 @@ pipeline {
 
         stage('Test'){
             steps{
-                sh 'NO_COLOR=1 DEBUG=cypress:cli cypress run --headless -b chrome --record -k 'CYPRESS_RECORD_KEY
+                sh 'NO_COLOR=1 DEBUG=cypress:cli cypress run --headless -b chrome --record -k ${CYPRESS_RECORD_KEY}'
             }
         }        
     }
