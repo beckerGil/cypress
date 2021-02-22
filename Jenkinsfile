@@ -1,7 +1,7 @@
 pipeline {
     agent {
         // docker { image 'cypress/base:14' }
-        docker { image 'cypress/included:6.3.0' }
+        docker { image 'cypress/included:6.5.0' }
     }
 
     environment  {
