@@ -8,6 +8,7 @@ pipeline {
         HOME = '/var/lib/jenkins/workspace/cypress_master'
         CYPRESS_CACHE_FOLDER = '/var/lib/jenkins/workspace/cypress_master@tmp/cache'
         DISPLAY = ':99'
+        CYPRESS_RECORD_KEY = "03b6e3df-6cb4-4c90-8c7a-f882fe169007"
     }
 
     stages {
@@ -26,7 +27,7 @@ pipeline {
 
         stage('Test'){
             steps{
-                sh 'NO_COLOR=1 DEBUG=cypress:cli cypress run --headless -b chrome  --record -k 03b6e3df-6cb4-4c90-8c7a-f882fe169007'
+                sh 'NO_COLOR=1 DEBUG=cypress:cli cypress run --headless -b chrome  --record -k CYPRESS_RECORD_KEY'
             }
         }        
     }
