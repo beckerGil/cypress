@@ -8,7 +8,7 @@ pipeline {
         HOME = '/var/lib/jenkins/workspace/cypress_master'
         CYPRESS_CACHE_FOLDER = '/var/lib/jenkins/workspace/cypress_master@tmp/cache'
         DISPLAY = ':99'
-        CYPRESS_RECORD_KEY = "03b6e3df-6cb4-4c90-8c7a-f882fe169007"
+        CYPRESS_RECORD_KEY = '03b6e3df-6cb4-4c90-8c7a-f882fe169007'
     }
 
     stages {
